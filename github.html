@@ -14,6 +14,7 @@
         --spotify-green: #1db954;
         --letterboxd-green: #00e054;
         --letterboxd-dark: #14181c;
+        --github-color: #24292e;
       }
 
       * {
@@ -72,6 +73,7 @@
         gap: 15px;
         align-items: center;
         margin-top: 10px;
+        flex-wrap: wrap;
       }
 
       .social-btn {
@@ -84,11 +86,18 @@
         font-weight: 600;
         font-size: 0.85rem;
         transition: transform 0.2s, filter 0.2s;
+        border: 1px solid transparent;
       }
 
       .social-btn:hover {
         transform: scale(1.05);
         filter: brightness(1.1);
+      }
+
+      .social-btn.github {
+        background-color: var(--github-color);
+        color: white;
+        border: 1px solid #555;
       }
 
       .social-btn.insta {
@@ -229,6 +238,10 @@
         .projects-grid {
           grid-template-columns: 1fr;
         }
+        .social-section {
+          flex-direction: column;
+          gap: 10px;
+        }
       }
     </style>
   </head>
@@ -245,11 +258,18 @@
 
       <div class="social-section">
         <a
+          href="https://github.com/Gabrieltannus61"
+          target="_blank"
+          class="social-btn github"
+        >
+          💻 GitHub
+        </a>
+        <a
           href="https://www.instagram.com/tannuz__?igsh=OXIybGdwZWJqbWpn"
           target="_blank"
           class="social-btn insta"
         >
-          @tannuz__
+          📸 @tannuz__
         </a>
         <a
           href="https://letterboxd.com/tannuzzz/"
