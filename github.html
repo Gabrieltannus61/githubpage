@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | Gabriel Tannus</title>
+    <style>
+      :root {
+        --bg-color: #121212;
+        --card-bg: #1e1e1e;
+        --text-primary: #ffffff;
+        --text-secondary: #b3b3b3;
+        --accent-color: #9a86ff;
+        --spotify-green: #1db954;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+
+      header {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(180deg, #2a2a2a 0%, var(--bg-color) 100%);
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: var(--text-secondary);
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+
+      .social-btn {
+        display: inline-block;
+        background: linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        transition: transform 0.2s;
+      }
+
+      .social-btn:hover {
+        transform: scale(1.05);
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      section {
+        margin-bottom: 60px;
+      }
+
+      h2 {
+        border-left: 5px solid var(--accent-color);
+        padding-left: 15px;
+        margin-bottom: 30px;
+        font-size: 2rem;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        padding: 25px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 1px solid #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        border-color: var(--accent-color);
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--accent-color);
+      }
+
+      .card p {
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+      }
+
+      .card-btn {
+        display: inline-block;
+        background-color: transparent;
+        color: var(--accent-color);
+        border: 2px solid var(--accent-color);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s;
+      }
+
+      .card-btn:hover {
+        background-color: var(--accent-color);
+        color: white;
+      }
+
+      .card-btn.spotify {
+        border-color: var(--spotify-green);
+        color: var(--spotify-green);
+      }
+      .card-btn.spotify:hover {
+        background-color: var(--spotify-green);
+        color: black;
+      }
+
+      .exercises-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .exercise-tag {
+        background-color: #333;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        transition: background 0.2s;
+      }
+
+      .exercise-tag:hover {
+        background-color: var(--accent-color);
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px;
+        color: var(--text-secondary);
+        border-top: 1px solid #333;
+        margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Gabriel Tannus</h1>
+      <p class="subtitle">Desenvolvedor Front-end | React | JavaScript</p>
+      <a
+        href="https://www.instagram.com/tannuz__?igsh=OXIybGdwZWJqbWpn"
+        target="_blank"
+        class="social-btn"
+      >
+        Siga no Instagram @tannuz__
+      </a>
+    </header>
+
+    <main>
+      <section id="checkpoints">
+        <h2>Projetos Principais</h2>
+        <div class="projects-grid">
+          <div class="card">
+            <div>
+              <h3>🎧 Spotify Clone</h3>
+              <p>
+                Projeto avançado em React simulando a interface do Spotify.
+                Inclui player de música funcional, listas de reprodução
+                gerenciáveis e navegação responsiva.
+              </p>
+              <p style="font-size: 0.8rem; color: #666">
+                Tecnologias: React, Hooks, Audio API.
+              </p>
+            </div>
+            <a
+              href="https://github.com/Gabrieltannus61/lista-de-exerc-cio-react/tree/main/Checkpoint%203"
+              class="card-btn spotify"
+              target="_blank"
+              >Acessar Projeto</a
+            >
+          </div>
+
+          <div class="card">
+            <div>
+              <h3>⚔️ Painel de RPG</h3>
+              <p>
+                Dashboard interativo para gerenciamento de personagens de RPG.
+                Inclui controle de HP/XP, inventário dinâmico, loja de itens e
+                diário de missões.
+              </p>
+              <p style="font-size: 0.8rem; color: #666">
+                Tecnologias: React, State Management, CSS Modules.
+              </p>
+            </div>
+            <a
+              href="https://github.com/Gabrieltannus61/lista-de-exerc-cio-react/tree/main/Checkpoint%202"
+              class="card-btn"
+              target="_blank"
+              >Acessar Projeto</a
+            >
+          </div>
+
+          <div class="card">
+            <div>
+              <h3>🚀 Dashboard Espacial</h3>
+              <p>
+                Primeiro checkpoint focado em componentes reutilizáveis.
+                Apresenta status de missão espacial, cartões de perfil e widget
+                de previsão do tempo.
+              </p>
+              <p style="font-size: 0.8rem; color: #666">
+                Tecnologias: React Basics, Props.
+              </p>
+            </div>
+            <a
+              href="https://github.com/Gabrieltannus61/lista-de-exerc-cio-react/tree/main/Checkpoint%201"
+              class="card-btn"
+              target="_blank"
+              >Acessar Projeto</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="exercicios">
+        <h2>Exercícios e Componentes</h2>
+        <p style="margin-bottom: 20px; color: #b3b3b3">
+          Coleção de componentes funcionais desenvolvidos durante o aprendizado:
+        </p>
+
+        <div class="exercises-list">
+          <a href="#" class="exercise-tag">🧮 Calculadora (Ex 10)</a>
+          <a href="#" class="exercise-tag">📝 Formulário Tempo Real (Ex 11)</a>
+          <a href="#" class="exercise-tag">👤 Criador de Avatar (Ex 11d)</a>
+          <a href="#" class="exercise-tag">💵 Conversor de Moedas</a>
+          <a href="#" class="exercise-tag">👍 Botão de Curtir</a>
+          <a href="#" class="exercise-tag">🔐 Gerador de Senhas</a>
+          <a href="#" class="exercise-tag">📋 To-Do List</a>
+          <a href="#" class="exercise-tag">☁️ Widget de Clima</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Gabriel Tannus. Desenvolvido com React & Vite.</p>
+    </footer>
+  </body>
+</html>
